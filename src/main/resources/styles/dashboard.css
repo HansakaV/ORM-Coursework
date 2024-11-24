@@ -1,0 +1,141 @@
+/* Modern color palette */
+root {
+    /* Primary colors */
+    --primary-dark: #1A202C;  /* Dark grayish blue */
+    --primary-main: #2D3748;  /* Deep slate blue */
+    --primary-light: #4A5568;  /* Slate gray */
+
+    /* Accent colors */
+    --accent-main: #3182CE;   /* Vibrant blue */
+    --accent-light: #63B3ED;  /* Sky blue */
+    --accent-hover: #2B6CB0;  /* Darker blue for hover */
+
+    /* Background colors */
+    --bg-light: #F7FAFC;      /* Off-white */
+    --bg-white: #FFFFFF;      /* Pure white */
+
+    /* Text colors */
+    --text-dark: #1A202C;     /* Deep slate gray */
+    --text-light: #E2E8F0;    /* Soft light gray */
+    --text-accent: #63B3ED;   /* Sky blue for emphasis */
+}
+
+/* Sidebar styling */
+#sidebar {
+    -fx-background-color: linear-gradient(to bottom, var(--primary-main), var(--primary-dark));
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 15, 0, 0, 5);
+    -fx-padding: 20;
+}
+
+/* Count section styling */
+#countSection {
+    -fx-background-color: var(--bg-white);
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+    -fx-padding: 20;
+    -fx-border-color: rgba(0, 0, 0, 0.08);
+    -fx-border-radius: 15;
+    -fx-border-width: 1;
+}
+
+/* Graph section styling */
+#graphSection {
+    -fx-background-color: var(--bg-white);
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+    -fx-padding: 20;
+    -fx-border-color: rgba(0, 0, 0, 0.08);
+    -fx-border-radius: 15;
+    -fx-border-width: 1;
+}
+
+/* Navigation buttons styling */
+#dashboardBtn,
+#userBtn,
+#studentBtn,
+#courseBtn,
+#paymentBtn,
+#registrationBtn {
+    -fx-text-fill: var(--text-light);
+    -fx-background-color: var(--accent-main);
+    -fx-padding: 12 20;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0, 0, 3);
+    -fx-transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover and pressed effects */
+#dashboardBtn:hover,
+#userBtn:hover,
+#studentBtn:hover,
+#courseBtn:hover,
+#paymentBtn:hover,
+#registrationBtn:hover {
+    -fx-background-color: var(--accent-light);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 0, 3);
+    -fx-transform: scale(1.03);
+}
+
+#dashboardBtn:pressed,
+#userBtn:pressed,
+#studentBtn:pressed,
+#courseBtn:pressed,
+#paymentBtn:pressed,
+#registrationBtn:pressed {
+    -fx-background-color: var(--accent-hover);
+    -fx-transform: scale(0.97);
+}
+
+/* Count number styling */
+#count1,
+#count2,
+#count3 {
+    -fx-text-fill: var(--primary-main);
+    -fx-font-weight: bold;
+    -fx-font-size: 26px;
+    -fx-effect: dropshadow(gaussian, rgba(45, 55, 72, 0.2), 4, 0, 0, 2);
+}
+
+/* Universal button transitions */
+.button {
+    -fx-transition: all 0.3s ease;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* Style for charts or graphs */
+.chart {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-vertical-grid-lines,
+.chart-horizontal-grid-lines {
+    -fx-stroke: rgba(45, 55, 72, 0.1);
+}
+
+/* Labels and text elements */
+.label {
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: var(--primary-main);
+    -fx-font-smoothing-type: gray;
+}
+
+/* Scrollbar styling */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: var(--accent-main);
+    -fx-background-radius: 5;
+}

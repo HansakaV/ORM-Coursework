@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import com.gluonhq.charm.glisten.control.TextField?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="signForm" prefHeight="763.0" prefWidth="1061.0" stylesheets="@../styles/signUp.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SignUpFormController">
+   <children>
+      <Pane fx:id="signUpDetails" layoutX="41.0" layoutY="42.0" prefHeight="680.0" prefWidth="438.0">
+         <children>
+            <Text layoutX="133.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtUsername" layoutX="67.0" layoutY="267.0" onAction="#txtUsernameOnAction" onKeyReleased="#txtUsernameOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter username" style="-fx-background-radius: 10;" />
+            <ComboBox fx:id="cmbUser" layoutX="67.0" layoutY="134.0" opacity="0.66" prefHeight="37.0" prefWidth="304.0" promptText="User" style="-fx-background-radius: 10;" visibleRowCount="2" />
+            <TextField fx:id="txtEmail" layoutX="68.0" layoutY="457.0" onAction="#txtEmailOnAction" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter email" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtMobile" layoutX="68.0" layoutY="517.0" onAction="#txtMobileOnAction" onKeyReleased="#txtMobileOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter mobile" style="-fx-background-radius: 10;" />
+            <Button fx:id="signUpBtn" layoutX="65.0" layoutY="575.0" mnemonicParsing="false" onAction="#signUpBtnOnAction" prefHeight="30.0" prefWidth="311.0" text="Sign Up" />
+            <Text layoutX="87.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account ?" />
+            <Hyperlink fx:id="loginHyperlink" layoutX="262.0" layoutY="626.0" onAction="#hyperlinkLoginOnAction" text="Login" />
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="329.0" layoutY="399.0">
+               <image>
+                  <Image url="@../assets/images/pw_icon.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtUserId" layoutX="67.0" layoutY="201.0" prefHeight="32.0" prefWidth="304.0" promptText="Enter userId" style="-fx-background-radius: 10;" />
+            <PasswordField fx:id="txtPassword" layoutX="67.0" layoutY="331.0" onAction="#txtPasswordOnAction" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter password" />
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="329.0" layoutY="334.0">
+               <image>
+                  <Image url="@../assets/images/pw_icon.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="txtPassword2" layoutX="67.0" layoutY="396.0" onAction="#txtPassword2OnAction" onKeyReleased="#txtPassword2OnKeyReleased" prefHeight="37.0" prefWidth="304.0" promptText="Confirm password" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="445.0" fitWidth="467.0" layoutX="508.0" layoutY="132.0">
+         <image>
+            <Image url="@../assets/images/signup_img.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
