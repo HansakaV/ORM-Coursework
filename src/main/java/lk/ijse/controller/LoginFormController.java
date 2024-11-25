@@ -86,6 +86,7 @@ public class LoginFormController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setResizable(false);
+            stage.setTitle("Culinary Academy Management System");
             stage.show();
 
             loginForm.getScene().getWindow().hide();

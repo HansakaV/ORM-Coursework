@@ -1,5 +1,7 @@
 package lk.ijse.controller;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,11 +9,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class DashboardFormController {
 
+    public Text lbldate;
+    public Text lbltime;
     @FXML
     private AnchorPane centerNode;
 
@@ -59,6 +66,15 @@ public class DashboardFormController {
 
     @FXML
     private Button registrationBtn;
+
+    // Date-Time Formatters
+    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+    public void initialize() {
+        // Start updating the labels
+        startDateTimeUpdater();
+    }
 
 
     @FXML
@@ -134,6 +150,19 @@ public class DashboardFormController {
     @FXML
     void studentViewBtnOnAction(ActionEvent event) {
 
+    }
+    private void startDateTimeUpdater() {
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.seconds(1), event -> {
+                    // Get the current date and time
+                    LocalDateTime now = LocalDateTime.now();
+                    // Update the date and time labels
+                    lbldate.setText(now.format(dateFormatter));
+                    lbltime.setText(now.format(timeFormatter));
+                })
+        );
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
     }
 }
 
