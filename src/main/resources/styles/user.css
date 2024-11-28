@@ -1,23 +1,23 @@
 #userForm{
-    -fx-border-color: #b27fb2;
+    -fx-border-color: #42d469;
     -fx-border-radius: 15;
 }
 #txtUserName,
 #txtPassword,
 #txtEmail,
 #txtContact{
-    -fx-border-color: purple;
+    -fx-border-color: #42d469;
     -fx-border-width: 2px;
 }
 
 #updateBtn,
 #deleteBtn,
 #clearBtn{
-    -fx-background-color: #bc3ebc;
+    -fx-background-color: #42d469;
     -fx-text-fill: white;
 
 }
 
 .table-view .column-header{
-    -fx-background-color: #c088c0;
+    -fx-background-color: #42d469;
 }

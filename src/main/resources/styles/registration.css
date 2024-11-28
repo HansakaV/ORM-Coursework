@@ -1,5 +1,5 @@
 #registerDetailPane{
-    -fx-border-color: purple;
+    -fx-border-color: #42d469;
     -fx-border-radius: 15;
 }
 #txtRegisterID,
@@ -10,7 +10,7 @@
 #txtProgramName,
 #txtProgramFee,
 #txtUpfrontPayment{
-    -fx-border-color: purple;
+    -fx-border-color: #42d469;
     -fx-border-width: 2px;
 }
 
@@ -20,7 +20,7 @@
 #clearBtn,
 #searchBtn,
 #viewBtn{
-    -fx-background-color: #bc3ebc;
+    -fx-background-color: #42d469;
     -fx-text-fill: white;
 }
 
